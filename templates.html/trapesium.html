@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Kalkulator Persegi</title>
+    <title>Kalkulator Trapesium</title>
     <style media="screen">
     body{
       margin: 0;
@@ -20,12 +20,11 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      background-image: linear-gradient(120deg,#227093,#f7f1e3);
+      background-image: linear-gradient(120deg,#c8d6e5,#dff9fb);
       transform: translate(-50%, -50%);
       padding: 200px;
       border-radius: 10px;
       box-shadow: 1px 1px 20px ;
-
     }
     .container h1{
       font-size: 30px;
@@ -33,35 +32,114 @@
       background-image: linear-gradient(120deg,#130f40,#c7ecee);
       border-radius: 20px;
       color: white;
+      margin-top: -90px;
     }
     .text{
       text-align: left;
-      margin-left: 42px;
+      margin-left: -30px;
       margin-bottom: -100px;
       color: black;
       position: absolute;
       margin-top: -8px;
-      font-size: large;
     }
 
-    #persegi{
+    .text4{
+      color: black;
+      position: absolute;
+      margin-top: 40px;
+      text-align: left;
+      margin-left: -30px;
+    }
+
+    .text5{
+      color: black;
+      position: absolute;
+      margin-top: 90px;
+      text-align: left;
+      margin-left: 6px;
+    }
+    .text6{
+      color: black;
+      position: absolute;
+      margin-top: 145px;
+      text-align: left;
+      margin-left: -30px;
+    }
+
+    .text, .text4, .text5, .text6{
+        font-size: large;
+        font-weight: 200;
+    }
+
+    #trapesium{
       color: #222f3e;
       text-align: left;
-      font-size: 19px;
-      font-weight: 400;
+      font-size: 20px;
+      font-weight: 200;
       outline: none;
       border: none;
       background: none;
       border-bottom: 1px solid;
-      margin-top: 5px;
+      margin-bottom: 26px;
     }
 
-    #persegi:focus{
+    #trapesium:focus{
       border-bottom: 2px solid #341f97;
       width: 300px;
       transition: 0.9s;
     }
 
+    #trapesium2{
+      color: #222f3e;
+      text-align: left;
+      font-size: 20px;
+      font-weight: 200;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid;
+    }
+
+    #trapesium2:focus{
+      border-bottom: 2px solid #341f97;
+      width: 300px;
+      transition: 0.9s;
+    }
+    #trapesium3{
+      color: #222f3e;
+      text-align: left;
+      font-size: 20px;
+      font-weight: 200;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid;
+      margin-top: 25px;
+    }
+
+    #trapesium3:focus{
+      border-bottom: 2px solid #341f97;
+      width: 300px;
+      transition: 0.9s;
+    }
+
+    #trapesium4{
+      color: #222f3e;
+      text-align: left;
+      font-size: 20px;
+      font-weight: 200;
+      outline: none;
+      border: none;
+      background: none;
+      border-bottom: 1px solid;
+      margin-top: 25px;
+    }
+
+    #trapesium4:focus{
+      border-bottom: 2px solid #341f97;
+      width: 300px;
+      transition: 0.9s;
+    }
     #btn{
       font-family: inherit;
       margin-top: 20px;
@@ -152,17 +230,49 @@
   </head>
   <body>
     <div class="container">
-      <h1>PERSEGI</h1>
+      <h1>TRAPESIUM</h1>
       <form action="/send" method="POST">
         <div class="text">
-          <p>Sisi : </p>
+          <p>Sisi Alas A : </p>
+        </div>
+        <div class="text4">
+            <p>Sisi Alas B : </p>
+        </div>
+        <div class="text6">
+            <p>Sisi Miring : </p>
+        </div>
+        <div class="text5">
+            <p>Tinggi : </p>
         </div>
         <input
           type="text"
-          placeholder="Masukkan Sisi (s)"
+          placeholder="Masukkan Alas (a)"
           class="u-full-width"
-          id="persegi"
-          name="persegi"
+          id="trapesium"
+          name="trapesium"
+        />
+
+        <input
+        type="text"
+        placeholder="Masukkan Miring (b)"
+        class="u-full-width"
+        id="trapesium2"
+        name="trapesium2"
+        />
+
+        <input
+        type="text"
+        placeholder="Masukkan Tinggi (t)"
+        class="u-full-width"
+        id="trapesium3"
+        name="trapesium3"
+        />
+        <input
+        type="text"
+        placeholder="Masukkan Sisi Miring (c)"
+        class="u-full-width"
+        id="trapesium4"
+        name="trapesium4"
         />
 
       <div class="result">
@@ -171,7 +281,6 @@
         <div class="result1">
           <p class="text3">Keliling : </p>
           {{ sum2 }}
-
       </div>
       <input type="submit" value="Hitung" id="btn">
         <br />
